@@ -555,6 +555,10 @@
   padding: 0;
 }
 
+button:focus {
+  outline: none;
+}
+
 .button-calendar:active {
   border: none;
 }
@@ -1198,6 +1202,12 @@
 .column-hotel-photo {
   grid-column: 1/2;
   margin-left: 5px;
+}
+
+.hotel-photo img {
+  max-width: 135px;
+  max-height: 90px;
+  object-fit: contain;
 }
 
 .column-hotel-detail {
