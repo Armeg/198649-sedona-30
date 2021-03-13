@@ -502,7 +502,7 @@
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: space-between;
-  margin-left: 20px;
+  margin-left: 30px;
 }
 
 .date-arrive-input,
@@ -511,12 +511,12 @@
 }
 
 .number-of-people-input,
-.number_of_children-input {
+.number-of-children-input {
   width: 25px;
   padding-left: 20px;
 }
 
-.number_of_children-label {
+.number-of-children-label {
   line-height: 26px;
   margin-left: 60px;
 }
@@ -584,7 +584,8 @@ button:focus {
 
 .button-minus-one svg {
   fill: var(--icon-input-color);
-  padding-left: 10px;
+  padding-left: 15px;
+  padding-bottom: 5px;
 }
 
 .button-minus-one svg:hover {
