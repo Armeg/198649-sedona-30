@@ -119,10 +119,6 @@
   margin-right: 100px;
 }
 
-.site-navigation a {
-  display: block;
-}
-
 .main-header-logo {
   position: absolute;
   right: 530px;
@@ -439,6 +435,7 @@
   color: var(--basic-white);
   text-transform: uppercase;
   border: none;
+  outline: none;
 }
 
 .form-search-hotels {
@@ -463,6 +460,7 @@
   font-size: 20px;
   border: none;
   text-align: center;
+  outline: none;
 }
 
 .button.search-hotels-form:hover {
@@ -505,14 +503,19 @@
   margin-left: 30px;
 }
 
-.date-arrive-input,
+.date-arrive-input {
+  width: 296px;
+  padding-left: 20px;
+}
+
 .date-leave-input {
+  width: 296px;
   padding-left: 15px;
 }
 
 .number-of-people-input,
 .number-of-children-input {
-  width: 25px;
+  width: 46px;
   padding-left: 20px;
 }
 
@@ -531,6 +534,7 @@
   background: none;
   border: none;
   background-color: var(--basic-blue);
+  outline: none;
 }
 
 .button.search-hotels:hover {
@@ -553,6 +557,7 @@
   border: none;
   margin: 0;
   padding: 0;
+  outline: none;
 }
 
 button:focus {
@@ -565,7 +570,7 @@ button:focus {
 
 .button-calendar svg {
   fill: var(--icon-input-color);
-  padding-right: 10px;
+  padding-right: 5px;
 }
 
 .button-calendar svg:hover {
@@ -580,6 +585,7 @@ button:focus {
   border: none;
   margin: 0;
   padding: 0;
+  outline: none;
 }
 
 .button-minus-one svg {
@@ -601,6 +607,7 @@ button:focus {
   margin: 0;
   padding: o;
   padding-right: 10px;
+  outline: none;
 }
 
 .button-plus-one svg {
