@@ -435,7 +435,6 @@
   color: var(--basic-white);
   text-transform: uppercase;
   border: none;
-  outline: none;
 }
 
 .form-search-hotels {
@@ -460,7 +459,6 @@
   font-size: 20px;
   border: none;
   text-align: center;
-  outline: none;
 }
 
 .button.search-hotels-form:hover {
@@ -534,7 +532,6 @@
   background: none;
   border: none;
   background-color: var(--basic-blue);
-  outline: none;
 }
 
 .button.search-hotels:hover {
@@ -557,11 +554,10 @@
   border: none;
   margin: 0;
   padding: 0;
-  outline: none;
 }
 
 button:focus {
-  outline: none;
+  border: none;
 }
 
 .button-calendar:active {
@@ -585,7 +581,6 @@ button:focus {
   border: none;
   margin: 0;
   padding: 0;
-  outline: none;
 }
 
 .button-minus-one svg {
@@ -607,7 +602,6 @@ button:focus {
   margin: 0;
   padding: o;
   padding-right: 10px;
-  outline: none;
 }
 
 .button-plus-one svg {
