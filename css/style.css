@@ -451,6 +451,19 @@
   box-shadow: 0px 7px 15px rgba(0, 1, 1, 0.15);
 }
 
+.search-hotels-form-disabled {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 .button.search-hotels-form {
   background-color: var(--basic-brown);
   width: 568px;
@@ -782,6 +795,10 @@ button:focus {
   margin: 25px 18px;
 }
 
+.infrastructure-options input:focus + label {
+  color: var(--basic-blue);
+}
+
 .infrastructure-options li {
   padding: 0;
   margin: 0;
@@ -826,6 +843,10 @@ button:focus {
 .type-of-housing-options li {
   margin: 0;
   padding: 0;
+}
+
+.type-of-housing-options input:focus + label {
+  color: var(--basic-blue);
 }
 
 .type-of-housing-options li:first-child {

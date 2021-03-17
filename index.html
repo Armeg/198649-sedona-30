@@ -136,7 +136,7 @@
               </p>
           </section>
           <section class="form-modal search-hotels">
-            <button type="button" class="button search-hotels-form search-hotels-form-disabled" >Поиск гостинницы в Седоне</button>
+            <button type="button" class="button search-hotels-form" >Поиск гостинницы в Седоне</button>
             <form action="https://echo.htmlacademy.ru/" class="form-search-hotels" method="post" target="_blank" id="form-search-hotels">
                     <label class="date-arrive-label" for="hotel-date-arrive">Дата заезда:
                     </label>
@@ -243,23 +243,8 @@
         </section>
     </footer>
   </div>
-  <script>
 
-  const onclick = document.querySelector(".search-hotels-form");
-  let form = document.querySelector('.form-search-hotels');
-
-  onclick.addEventListener("click", function (evt) {
-    evt.preventDefault();
-});
-if (form.classList.contains('form-search-hotels')) {
-    form.classList.remove('form-search-hotels');
-
-  } else {
-    form.classList.add('form-search-hotels')
-    console.log ('its work');
-  }
-
-</script>
+  <script src="js/script.js"></script>
 
 </body>
 
