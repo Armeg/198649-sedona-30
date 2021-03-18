@@ -22,7 +22,7 @@ try {
 }
 
 form.addEventListener('submit', function (evt) {
-if (!numberOfPeople.value || !numberOfChildren.value) {
+if (!people.value || !children.value) {
   evt.preventDefault();
   form.classList.add('modal-error');
   console.log('write number of people and children');
