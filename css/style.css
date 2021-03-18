@@ -437,6 +437,19 @@
   border: none;
 }
 
+@keyframes descent {
+  0% {transform: translateY(-2000px); }
+  70% {transform: translateY(30px); }
+  90% {transform: translateY(-10px); }
+  100% {transform: translateY(0); }
+}
+
+@keyframes shake {
+  0%, 100% {transform: translateX(0); }
+  10%, 30%, 50%, 70%, 90% {transform: translateX(-10px); }
+  20%, 40%, 60%, 80% {transform: translateX(10px); }
+}
+
 .form-search-hotels {
   width: 528px;
   height: 355px;
@@ -449,6 +462,8 @@
   align-items: center;
   padding: 20px;
   box-shadow: 0px 7px 15px rgba(0, 1, 1, 0.15);
+  animation-name: descent;
+  animation-duration: 0.6s;
 }
 
 .search-hotels-form-disabled {
@@ -472,6 +487,11 @@
   font-size: 20px;
   border: none;
   text-align: center;
+}
+
+.modal-error {
+  animation-name: shake;
+  animation-duration: 0.6s;
 }
 
 .button.search-hotels-form:hover {
@@ -569,10 +589,6 @@
   padding: 0;
 }
 
-button:focus {
-  border: none;
-}
-
 .button-calendar:active {
   border: none;
 }
@@ -636,7 +652,7 @@ button:focus {
 
 .search-hotels input:focus {
   background-color: var(--basic-white);
-  border: 2px solid #E5E5E5;
+  outline: 2px solid #E5E5E5;
 }
 
 .main-footer {
