@@ -3,54 +3,53 @@
   let form = document.querySelector('.form-search-hotels');
   const date_arrive = form.querySelector('[name=hotel-date-arrive]');
   const date_leave = form.querySelector('[name=hotel-date-leave]');
-  const people = form.querySelector('[name=hotel-number_of_people]');
-  const children = form.querySelector('[name=hotel-number_of_children]');
-
-  let numberPeople = localStorage.getItem('people');
-  let numberChildren = localStorage.getItem('children');
+  //localStorage.setItem('people', '2');
+  //localStorage.setItem('children', '0');
+  const inputPeople = form.querySelector('[name=hotel-number_of_people]');
+  const inputChildren = form.querySelector('[name=hotel-number_of_children]');
+  inputPeople.value = localStorage.getItem('people') || 2;
+  inputChildren.value = localStorage.getItem('children') || 0;
 
   let isStorageSupport = true;
   let storage = '';
 
   try {
-  storage = localStorage.getItem('numberPeople');
-  children = localStorage.getItem('numberChildren');
-} catch (err) {
-  numberPeople = false;
-}
-
+    storage = localStorage.getItem('people');
+    console.log(storage);
+  } catch (err) {
+    isStorageSupport = false;
+  }
 
   form_managment.addEventListener("click", function (evt) {
     evt.preventDefault();
     form.classList.toggle('search-hotels-form-disabled');
     form.classList.toggle('form-search-hotels');
-    people.focus();
-    if (numberPeople) {
-      localStorage.setItem('people', people.value);
-      localStorage.setItem('children', children.value);
+    if (storage) {
+      inputPeople.value = storage;
     }
 });
 
-  form.addEventListener('submit', function (evt) {
-    if ( !numberPeople.value || !numberChildren.value) {
-    evt.preventDefault();
-    form.classList.add('modal-error');
-    console.log('write number of people and children');
-    }  else {
-      if (isStorageSupport) {
-      localStorage.setItem('people', numberPeople.value);
-      localStorage.setItem('children', numberChildren.value);
-    }
-
+form.addEventListener('submit', function (evt) {
+  if ( !inputPeople.value || !inputChildren.value) {
+  evt.preventDefault();
+  form.classList.add('modal-error');
+  console.log('write number of people and children');
+  }  else {
+    if (isStorageSupport) {
+    localStorage.setItem('people', inputPeople.value);
+    localStorage.setItem('children', inputChildren.value);
   }
-  });
 
+}
+});
 
 window.addEventListener('keydown', function(evt) {
-  if (evt.keycode === 27) {
+  console.log(evt);
+  if(evt.key === "Escape"){
+    alert('esc!');
     if(form.classList.contains('form-search-hotels')) {
       evt.preventDefault();
-      form.classList.remove('form-search-hotels');
+      form.classList.add('search-hotels-form-disabled');
     }
   }
 });
