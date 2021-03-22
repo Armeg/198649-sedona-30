@@ -342,9 +342,8 @@
 }
 
 .adventure-text {
-  display: inline-block;
+  display: block;
   margin-top: 6px;
-
 }
 
 .blue-back {
@@ -1291,7 +1290,7 @@
 
 .hotel-type,
 .hotel-price {
-  display: inline-block;
+  display: block;
   width: 110px;
   margin-top: 0;
 }
