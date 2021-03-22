@@ -1,4 +1,5 @@
 
+
   const form_managment = document.querySelector(".search-hotels-form");
   let form = document.querySelector('.form-search-hotels');
   const date_arrive = form.querySelector('[name=hotel-date-arrive]');
@@ -9,6 +10,10 @@
   const inputChildren = form.querySelector('[name=hotel-number_of_children]');
   inputPeople.value = localStorage.getItem('people') || 2;
   inputChildren.value = localStorage.getItem('children') || 0;
+
+  // hide form
+
+form.classList.add("search-hotels-form-disabled");
 
   let isStorageSupport = true;
   let storage = '';
@@ -22,8 +27,11 @@
 
   form_managment.addEventListener("click", function (evt) {
     evt.preventDefault();
-    form.classList.toggle('search-hotels-form-disabled');
-    form.classList.toggle('form-search-hotels');
+    //form.classList.toggle('form-search-hotels');
+    //form.classList.toggle('search-hotels-form-disabled');
+    form.classList.remove('search-hotels-form-disabled');
+    form.classList.add('form-search-hotels');
+
     if (storage) {
       inputPeople.value = storage;
     }

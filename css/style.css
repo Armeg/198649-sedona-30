@@ -479,6 +479,10 @@
   overflow: hidden;
 }
 
+.form-position {
+  position: relative;
+}
+
 .button.search-hotels-form {
   background-color: var(--basic-brown);
   width: 568px;
